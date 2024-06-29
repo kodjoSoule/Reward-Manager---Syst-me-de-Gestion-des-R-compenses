@@ -61,11 +61,67 @@ L'application "Rewards Dining" est composée de quatre microservices principaux 
 
 - **Lien GitHub :** [Account Contribution Service](https://github.com/kodjoSoule/rm-account-contribution-service)
 
+### Client Frontend
+
+Le client frontend de l'application est développé avec Angular 17 et Bootstrap, offrant une interface utilisateur moderne et réactive pour les utilisateurs finaux.
+
+- **Fonctionnalités :**
+  1. Inscription et connexion des utilisateurs.
+  2. Consultation des restaurants participants.
+  3. Suivi des transactions et des récompenses.
+  4. Gestion des comptes et des bénéficiaires.
+
+- **Lien GitHub :** [Client Frontend](https://github.com/kodjoSoule/reward-manager-front-end)
+
 ## Installation et Déploiement
 
-1. Clonez les repositories GitHub des microservices.
-2. Configurez chaque microservice avec les paramètres appropriés.
-3. Déployez les microservices sur votre environnement cloud préféré.
+### Pré-requis
+
+- Java 17 ou version supérieure
+- Maven 3.8 ou version supérieure
+- Node.js 16 ou version supérieure
+- Angular CLI 12 ou version supérieure
+- Docker (optionnel)
+
+### Étapes
+
+1. Clonez les repositories GitHub des microservices et du client frontend.
+    ```bash
+    git clone https://github.com/kodjoSoule/rm-benefits-restaurant-service
+    git clone https://github.com/kodjoSoule/rm-benefit-calculation-service
+    git clone https://github.com/kodjoSoule/rm-reward-manager-service
+    git clone https://github.com/kodjoSoule/rm-account-contribution-service
+    git clone https://github.com/kodjoSoule/reward-manager-front-end
+    ```
+
+2. Construisez les microservices :
+    ```bash
+    cd rm-benefits-restaurant-service
+    mvn clean install
+    cd ../rm-benefit-calculation-service
+    mvn clean install
+    cd ../rm-reward-manager-service
+    mvn clean install
+    cd ../rm-account-contribution-service
+    mvn clean install
+    ```
+
+3. Lancez les microservices :
+    ```bash
+    java -jar rm-benefits-restaurant-service/target/benefit-restaurant-service.jar
+    java -jar rm-benefit-calculation-service/target/benefit-calculation-service.jar
+    java -jar rm-reward-manager-service/target/reward-manager-service.jar
+    java -jar rm-account-contribution-service/target/account-contribution-service.jar
+    ```
+
+4. Configurez et lancez le client frontend :
+    ```bash
+    cd reward-manager-front-end
+    npm install
+    ng serve
+    ```
+
+5. Accédez à l'application frontend via `http://localhost:4200`.
 
 ## Auteur
 
