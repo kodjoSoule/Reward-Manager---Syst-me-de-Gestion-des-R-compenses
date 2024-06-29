@@ -13,10 +13,8 @@ Le projet "Reward-Manager - Système de Gestion des Récompenses" est une applic
 
 ## Fonctionnement du Plan Épargne Restaurant
 
-1. Les membres dînent dans les restaurants du réseau en utilisant leurs cartes de crédit habituelles.
-2. Un fichier contenant les transactions par carte de crédit est généré toutes les deux semaines.
-3. Une application autonome "Dining Batch Processor" lit ce fichier et soumet chaque enregistrement de repas à l'application de récompenses "Rewards Dining" pour traitement.
-4. L'application "Rewards Dining" calcule et distribue les récompenses sur les comptes des clients.
+- Les membres dînent dans les restaurants du réseau en utilisant leurs cartes de crédit habituelles.
+- L'application "Rewards Dining" calcule et distribue les récompenses sur les comptes des clients.
 
 ## Architecture de l'Application
 
